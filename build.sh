@@ -22,6 +22,7 @@ export PATH="$GITHUB_WORKSPACE/toolchain/bin:$PATH"
 # export CROSS_COMPILE="aarch64-linux-android-"
 export KBUILD_BUILD_USER="github"
 export KBUILD_BUILD_HOST="actions"
+export KCFLAGS="-Wno-error=format"
 
 msg "Generating defconfig..."
 make O=out $arch_opts "$defconfig" || err "Invalid defconfig"
