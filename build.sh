@@ -17,8 +17,9 @@ defconfig="vendor/lahaina-qgki_defconfig"
 arch_opts="ARCH=${arch} SUBARCH=${arch}"
 export ARCH=$arch
 export SUBARCH=$arch
-#export CROSS_COMPILE="aarch64-elf-"
-export CROSS_COMPILE="aarch64-linux-android-"
+export CROSS_COMPILE="aarch64-elf-"
+export PATH="$GITHUB_WORKSPACE/toolchain/bin:$PATH"
+# export CROSS_COMPILE="aarch64-linux-android-"
 export KBUILD_BUILD_USER="github"
 export KBUILD_BUILD_HOST="actions"
 
